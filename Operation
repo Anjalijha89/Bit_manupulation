@@ -1,0 +1,81 @@
+package com.company;
+
+public class Bit_manupulation {
+    public static void main(String args[]) {
+      //2
+        even_odd(61);
+        even_odd(33);
+
+        //3
+        System.out.println(getithbit(10,2));
+
+        //4
+        System.out.println(setithbit(10,2));
+
+        //5
+        System.out.println(clearithbit(10,1));
+
+        //6
+        System.out.println(updateithbit(10,2,1));
+
+    }
+    //2 Find even or odd
+    public static void even_odd(int n)
+    {
+        int bitmask=1;
+        if((n & bitmask)==0)
+        {
+            System.out.println("Even");
+        }
+        else
+        {
+            System.out.println("Odd");
+        }
+    }
+
+    //3 Get ith bit
+    public static int getithbit(int n, int i)
+    {
+        int bitmask = 1<<i;
+        if((n & bitmask)==0)
+        {
+            return 0;
+        }
+        else
+        {
+            return 1;
+        }
+    }
+
+    //4 Set ith bit
+    public static int setithbit(int n,int i)
+    {
+        int bitmask = 1<<i;
+        return n | bitmask;
+    }
+
+    //5 Clear ith bit
+    public static int clearithbit(int n,int i)
+    {
+        int bitmask = ~(1<<i);
+        return n & bitmask;
+    }
+
+    //6 Update ith bit
+    public static int updateithbit(int n,int i,int newbit)
+    {
+        if(newbit==0)
+        {
+            return clearithbit(n,i);
+        }
+        else
+        {
+            return setithbit(n,i);
+        }
+    }
+
+
+
+}
+
+
