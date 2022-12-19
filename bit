@@ -1,0 +1,23 @@
+public class Bit_manupulation {
+    public static void main(String args[]) {
+        
+        // Binary And operation
+        System.out.println((5 & 6));
+
+        // Binary OR operation
+        System.out.println((5 | 6));
+
+        // Binary XOR operation
+        System.out.println((5 ^ 6));
+
+        // Binary 1's complement
+        System.out.println((~5));
+
+        // Binary left shift
+        System.out.println((5 << 2));
+
+        // Binary right shift
+        System.out.println((6 >> 1));
+
+       }
+  }
