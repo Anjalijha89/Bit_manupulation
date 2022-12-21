@@ -17,6 +17,9 @@ public class Bit_manupulation {
 
         //6
         System.out.println(updateithbit(10,2,1));
+        
+        //7
+        System.out.println(clearlastithbit(15,2));
 
     }
     //2 Find even or odd
@@ -74,8 +77,14 @@ public class Bit_manupulation {
         }
     }
 
-
+ //7 Clear last i bits
+    public static int clearlastithbit(int n,int i)
+    {
+        int Bitmask = (~0)<<i;
+        return n&Bitmask;
+    }
 
 }
+
 
 
